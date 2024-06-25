@@ -1,13 +1,14 @@
 
 <script setup lang="ts">
     import "@/assets/js/menu.ts";
-    import 'bootstrap/dist/css/bootstrap.min.css';
+    
     import $ from 'jquery';
+    
 
     
     import { ref } from "vue";
     import type {Ref} from "vue";
- 
+    
     
 
     let show_picture:Ref<boolean> = ref(true) //default value
@@ -74,12 +75,8 @@
     let Langauge_EN:Ref<boolean> = ref(false)
     let Langauge_IN:Ref<boolean> = ref(false)
 
-    let change_lang = (type:string,event:any) =>{
+    let change_lang = (type:string) =>{
 
-        
-        //change click event text decoration
-        $(".lang_selection span").css("text-decoration","none")
-        $(event.target).css("text-decoration","underline")
 
         if (type == "CH"){
 
@@ -103,9 +100,39 @@
         }
     }
 
+    let Selected_food_data = [{
+            food_title:"酥炸魷魚絲",
+            description:"酥脆香甜、口感Q彈<br>\
+                            搭配小蒜頭特製胡椒<br>\
+                            是許顧客必買的項目<br>",
+            picture:"src/assets/img/魷魚絲.png"
+        },
+        {
+            food_title:"酥炸鹹酥雞",
+            description:"傳統醃漬手法 <br>\
+                        加上代骨雞肉<br>\
+                        一口吃下滿滿的醬香和肉香<br>\
+                        是許顧客必買商品<br>",
+            picture:"src/assets/img/鹹酥雞.png"
+
+        },
+        {
+            food_title:"七里香、雞胗、雞心",
+            description:"特殊醃料配上酥脆油炸手法<br>\
+                    去除腥味的同時<br>\
+                    保留肉味的香氣<br>\
+                    許多害怕內臟類的顧客也敢嘗試<br>",
+            picture:"src/assets/img/串串.png"
+        }
+
+    ]
+
+    
+
+     
 </script>
 <style lang="scss">
-    @import "@/assets/css/menu.scss";
+    @import "../assets/css/menu.scss";
 </style>
 
 <template>
@@ -115,102 +142,46 @@
             <div class="col-lg-12"> Menu  Langauge </div>
             
             <div class="lang_selection col-lg-12">
-                <span @click="change_lang('CH',$event)" style="text-decoration: underline;"> 繁體中文 </span>
-                <span @click="change_lang('EN',$event)"> English </span>
-                <span @click="change_lang('IN',$event)"> Indonesian </span>
+                <span @click="change_lang('CH')" :class="{display_underline:Langauge_CH}"> 繁體中文 </span>
+                <span @click="change_lang('EN')" :class="{display_underline:Langauge_EN}"> English </span>
+                <span @click="change_lang('IN')" :class="{display_underline:Langauge_IN}"> Indonesian </span>
 
             </div>
             
-        </div>
-        <div class="arrow">
-
-            &darr;
-            <span>scroll</span>
         </div>
         
-        <div class="Selected-food row">
-
-            
+        
+        <div class="Selected-food row" >
             <h2> 精選美食</h2>
             
-
-                
-
-            <div class="Selected-food-gorup">
-
-                
-
-
-                
-                <div class="col-lg-3 Selected_food_title"> 
-                酥炸魷魚絲
-
-                </div>
-                
-                <div class="col-lg-3 Selected_food_description">
-                    酥脆香甜、口感Q彈<br>
-                    搭配小蒜頭特製胡椒<br>
-                    是許顧客必買的項目<br>
-
-                </div>
-
-                
-
-                <div class="col-lg-6 Selected_food_picture"> 
-                    <img src="@/assets/img/魷魚絲.png" alt="">
-
-                </div>
-
-            </div>
-
-
-            <div class="Selected-food-gorup">
-                
-
-                <div class="col-lg-6 Selected_food_picture"> 
-                    <img src="@/assets/img/鹹酥雞.png" alt="">
-
-                </div>
-
-                <div class="col-lg-3 Selected_food_title"> 
-                酥炸鹹酥雞
-
-                </div>
             
-                <div class="col-lg-3 Selected_food_description">
-                    傳統醃漬手法 <br>
-                    加上代骨雞肉<br>
-                    一口吃下滿滿的醬香和肉香<br>
-                    是許顧客必買商品<br>
-
-                </div>
-
-            </div>
-
-
-            <div class="Selected-food-gorup">
-                <div class="col-lg-3 Selected_food_title"> 
-                七里香&雞胗&雞心
-
-                </div>
-
-                <div class="col-lg-3 Selected_food_description">
-                    特殊醃料配上酥脆油炸手法<br>
-                    去除腥味的同時<br>
-                    保留肉味的香氣<br>
-                    許多害怕內臟類的顧客也敢嘗試<br>
-
-                </div>
-
-                <div class="col-lg-6 Selected_food_picture"> 
-                    <img src="@/assets/img/串串.png" alt="">
-
-                </div>
-
-            </div>
-                
             
+            <div class="Selected-food-gorup" v-for="item in Selected_food_data">
 
+                <div class="Selected_food_title">
+
+                    {{item.food_title}}
+                
+
+                </div>
+
+                
+                
+                <div class="Selected_food_description" v-html="item.description">
+                    
+
+                </div>
+
+
+                <div class="Selected_food_picture"> 
+                    <img :src=item.picture alt="">
+
+                </div>
+                
+
+                
+
+            </div>
 
             
 
@@ -222,9 +193,9 @@
 
             <div class="Select_menu_type_selection">
 
-                <span @click="change_show('picture')">圖片菜單</span>
+                <span @click="change_show('picture')" :class="{display_underline:show_picture}">圖片菜單</span>
                 <span>｜</span>
-                <span @click="change_show('list')">紙本菜單</span>
+                <span @click="change_show('list')" :class="{display_underline:!show_picture}">紙本菜單</span>
             </div>
 
            

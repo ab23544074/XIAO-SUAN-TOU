@@ -6,6 +6,7 @@ import {ref} from 'vue';
 import { log } from 'console';
 import { json } from 'stream/consumers';
 
+
 window.onresize = () => {
   screen_width_change_event ()
 };
@@ -21,11 +22,15 @@ let screen_width_change_event = () => {
   }
 
 }
+
+
 let SP_Nav_display = () => {
-  
+  let menu_icon_display = $('#menu_icon').is(':hidden');
   let nav_show = $('nav').is(':hidden');
   
-  
+  if (menu_icon_display === true){
+    return
+  }
 
   if (nav_show === true ) {
     $('nav').show()
@@ -88,9 +93,9 @@ const Get_Store_Data = async () =>{
     
     <!--store icon-->
     <a href="./home" class="nav_icon">
-      <img src="./assets/img/Logo2.PNG" alt=""  id="logo">
+      <img src="@/assets/img/Logo2.PNG" alt=""  id="logo">
     </a>
-    <img @click="SP_Nav_display()" src="./assets/img/icons8-menu-150.svg" alt="" width="30" id="menu_icon">
+    <img @click="SP_Nav_display()" src="@/assets/img/icons8-menu-150.svg" alt="" width="30" id="menu_icon">
 
     
     <nav> 

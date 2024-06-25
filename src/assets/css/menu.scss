@@ -5,6 +5,7 @@
 
 
 #menu_background{
+    
     width: 100%;
     min-height: 100vh;
     background-size: cover;
@@ -28,7 +29,7 @@ header{
     font-size: 2rem;
     *{
         font-weight: bold;
-        cursor: pointer;
+        
     }
     
 
@@ -44,25 +45,8 @@ header{
 
 
 
-.arrow{
-
-    
-    font-size: 5rem;
-    margin-bottom: 10%;
-    align-items: center;
-    display: flex;
-    justify-content: center;
-    animation-name: arrow;
-    animation-duration: 2s;
-    span{
-        font-size: 1rem;
-    }
-}
 
 
-@keyframes arrow{
-
-}
 
 .Selected-food{
 
@@ -76,27 +60,19 @@ header{
     img{
 
         width: 40vw;
-        max-width: 400px;
+        max-width: 300px;
     }
 
-    div{
-        display: flex;
-        align-items: center;
-        justify-content: center;
-
-        
-    }
-    
 
     .Selected_food_title{
         
-        font-size: 2rem;
+        font-size: 1.5rem;
         border-top: solid white;
         border-bottom: solid white;
-        width: 50px;
         
         
-        padding: 3% 0;
+        writing-mode: vertical-lr;
+        padding: 3% 2px;
         
     }
 
@@ -104,17 +80,20 @@ header{
     .Selected_food_description{
     
         font-size: 1.2rem;
-        letter-spacing: 0.5rem;
-        margin: 0 5%;
+        letter-spacing: 0.4rem;
+        margin: 0 3%;
         
     }
 
     
 
     .Selected-food-gorup{
-
-        
-        margin: 5% 5%;
+        width: 90%;
+        display: flex;
+        margin: 5% 0;
+        justify-content: space-evenly;
+        align-items: center;
+        flex-wrap: wrap;
         
     }
 
@@ -153,7 +132,7 @@ header{
     img{
         width:15vw;;
         padding:20px;
-        max-width: 300px;
+        max-width: 200px;
         min-width: 180px;
         object-fit: cover;
         background: white;
@@ -172,11 +151,55 @@ header{
 }
 
 .menu_foods_grounp{
+
+    background: #ffffff9e;
+    margin: 5%;
+    border-radius: 30px;
     display:flex;
     justify-items: center;
     align-items: center;
     flex-wrap: wrap;
     padding: 5%;
     justify-content: space-around;
+}
+
+.Selected-food-gorup:nth-child(odd){
+    flex-direction: row-reverse !important;
+}
+
+
+.Select_menu_type_selection, .lang_selection {
+    span {
+        position: relative;
+        cursor: pointer;
+        font-weight: bold;
+        &::before {
+            content: '';
+            position: absolute;
+            width: 0%;
+            height: 3px;
+            top: calc(100%);
+            transition: 0.4s;
+            background-color: #fff;
+        }
+    }
+}
+
+
+.display_underline{
+    &::before {
+        width: 100% !important;
+    }
+}
+
+
+.Select_menu_type_selection, .lang_selection  {
+    span {
+        &:hover {
+            &::before {
+                width: 100%;
+            }
+        }
+    }
 }
 
