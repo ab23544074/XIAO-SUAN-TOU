@@ -1,0 +1,27 @@
+Menu_ID,name_ch,name_EN,name_Indonesian,Custom_unit,Factory_unit,factory_name_id,Custom_price,Factory_price,menu_picture
+7,鹹酥雞,"Taiwanese fried chicken","Ayam Renyah Asin",份,件,3,50,560,static/images/鹹酥雞-Photoroom_G2PLWDZ.webp
+8,德國香腸,"German sausage","sosis Jerman",根,包,3,20,300,static/images/德國香腸-Photoroom.png
+9,地瓜,"sweet potato",ubi,份,斤,6,20,NULL,static/images/地瓜-Photoroom.webp
+11,杏鮑菇,"King oyster mushroom","Jamur tiram raja",份,包,3,30,NULL,static/images/炸杏鮑菇-Photoroom_ip2i41O.webp
+12,無骨辣味,"Spicy boneless chicken","Ayam pedas tanpa tulang",份,件,3,30,300,static/images/無骨辣味-Photoroom.webp
+13,玉米筍,"Corn shoots","Tunas jagung",份,件,3,20,100,static/images/玉米筍-Photoroom.webp
+14,傳統切片,"Traditional tempura","Traditional tempura",2個,包,3,15,300,static/images/傳統切片-Photoroom.webp
+15,四季豆,"French beans","Kacang Perancis",把,斤,6,20,200,static/images/四季豆-Photoroom.webp
+16,大腸,"rice sausage","sosis nasi",根,包,6,25,250,static/images/大腸-Photoroom.webp
+17,大豆干,"dried tofu","Tahu Kering",個,包,6,15,200,static/images/大豆干-Photoroom.webp
+18,小黃瓜,gherkin,ketimun,根,斤,6,15,200,static/images/小黃瓜-Photoroom.webp
+19,日式切片,"Japanese tempura","Tempura Jepang",個,包,6,20,200,static/images/日式切片-Photoroom.webp
+20,炭燒Q軟,"Charcoal grilled flavor tempura","Tempura panggang arang",個,包,3,10,250,static/images/炭燒Q軟-Photoroom.webp
+21,無骨原味,"Boneless chicken (no spicy)","Ayam tanpa tulang (tidak pedas)",份,件,3,35,500,static/images/無骨原味-Photoroom.png
+23,熱狗,"Hot dog","Hot Dog",根,包,5,5,200,static/images/熱狗-Photoroom.webp
+24,百頁豆腐,"Bai ye tofu","Bai ye tofu",個,包,6,15,200,static/images/百頁豆腐.webp
+25,米血,"pig’s blood cake","kue darah babi",個,包,6,15,1,static/images/米血-Photoroom-Photoroom.png
+26,花枝丸,"squid ball","bola cumi",個,件,6,20,1,static/images/花枝丸-Photoroom.webp
+27,蘿蔔糕,carrotcake,"kue wortel",個,包,3,15,200,static/images/蘿蔔糕-Photoroom.webp
+28,蛋餅皮,"Egg pancake crust","Kerak pancake telur",個,包,3,20,200,static/images/蛋餅皮-Photoroom-Photoroom.png
+29,酥脆甜不辣,"Crispy tempura","Tempura renyah",個,件,3,25,2,static/images/酥脆甜不辣-Photoroom.webp
+30,雞肉香腸,"Chicken sausage","Sosis ayam",個,包,3,15,2,static/images/雞肉香腸-Photoroom.webp
+31,雞脖子,"Chicken neck","Leher ayam",個,包,3,10,1,static/images/雞脖子-Photoroom.webp
+32,雞蛋豆腐,"Egg tofu","Tahu telur",個,件,4,5,1,static/images/雞蛋豆腐-Photoroom.webp
+33,高麗菜,Cabbage,Kubis,份,件,6,25,200,static/images/高麗菜-Photoroom.png
+34,香軟甜不辣,"Soft tempura","Tempura lembut",2個,件,3,15,500,static/images/香軟甜不辣-Photoroom.webp
