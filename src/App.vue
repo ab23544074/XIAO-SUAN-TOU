@@ -85,7 +85,7 @@ const Get_Store_Data = async () =>{
     
     
     <!--store icon-->
-    <a href="./home" class="nav_icon">
+    <a href="./" class="nav_icon">
       <img src="@/assets/img/Logo2.png" alt=""  id="logo">
     </a>
     <img @click="SP_Nav_display()" src="@/assets/img/icons8-menu-150.svg" alt="" width="30" id="menu_icon">
@@ -94,7 +94,7 @@ const Get_Store_Data = async () =>{
     <nav> 
         
       
-      <RouterLink to="/home" @click="SP_Nav_display()">首頁 <span>HOME</span></RouterLink>
+      <RouterLink to="/" @click="SP_Nav_display()">首頁 <span>HOME</span></RouterLink>
       <RouterLink to="/about" @click="SP_Nav_display()">關於我們 <span>ABOUT US</span></RouterLink>
       <RouterLink to="/Menu" @click="SP_Nav_display()">菜單 <span>MENU</span></RouterLink>
       <RouterLink to="/address" @click="SP_Nav_display()">門市資訊 <span>BRANCH</span></RouterLink>
