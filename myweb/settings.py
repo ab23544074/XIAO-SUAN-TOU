@@ -98,7 +98,7 @@ DATABASES = {
         'NAME': 'HuangFamily_store', #database name
         'USER': 'root',
         'PASSWORD': 'root',
-        'HOST': '127.0.0.1',
+        'HOST': '192.168.176.1',
         'PORT': '3307',
     }
 }
