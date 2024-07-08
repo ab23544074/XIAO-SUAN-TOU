@@ -19,13 +19,13 @@ router.register(r'Menu', views.MenuViewSet)
 
 
 urlpatterns = [
-    path('', views.index),
+    #path('', views.index),
     path('admin/', admin.site.urls),
-    path('home/',views.home),
+    #path('home/',views.home),
     # path('about/',views.about),
     path('api/', include(router.urls)),
     
-    
+    #path('', TemplateView.as_view(template_name="index.html"))
 ]
 
 

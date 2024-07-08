@@ -13,6 +13,13 @@ class Menu(models.Model):
     name_ch = models.CharField(("商品名稱（中文）"), max_length=20,help_text='鹹酥雞')
     name_EN = models.CharField(("商品名稱（英文）"),max_length=50,help_text='Taiwanese fried chicken')
     name_Indonesian = models.CharField(("商品名稱（印尼文）"),max_length=100,help_text='Ayam Renyah Asin')
+
+    food_types = models.ForeignKey(
+        'Food_types',
+        on_delete=models.SET_NULL,
+        null=True,
+        blank=True
+    )
     menu_picture = models.ImageField(upload_to='static/images/', blank=True, null=True)
     factory_name = models.ForeignKey(
         'Factory',
@@ -31,7 +38,7 @@ class Menu(models.Model):
         ordering = ['Menu_ID']
 
     def __str__(self):
-        return f'{self.name_ch},{self.name_EN},{self.name_Indonesian},{self.Custom_unit},{self.Custom_price},{self.factory_name},{self.Factory_unit},{self.Factory_price}'
+        return f'{self.name_ch},{self.name_EN},{self.name_Indonesian},{self.food_types},{self.Custom_unit},{self.Custom_price},{self.factory_name},{self.Factory_unit},{self.Factory_price}'
 
 
 class Factory(models.Model):
@@ -43,6 +50,15 @@ class Factory(models.Model):
     def __str__(self):
         return self.factory_name
 
+class Food_types(models.Model):
+    Food_types_ID = models.AutoField(primary_key=True)
+    type_name = models.CharField(("食物類別"),max_length=10)
+    class Meta:
+        ordering = ['Food_types_ID']
+    
+    def __str__(self):
+        return self.type_name
+    
 
 class store(models.Model):
     Store_ID = models.AutoField(primary_key=True)

@@ -27,18 +27,25 @@ class StoreSerializer(serializers.ModelSerializer):
         # fields = '__all__'
         fields = ('Store_ID', 'store_name', 'address', 'phone')
 
-
-
+class FoodtypeSerializer(serializers.ModelSerializer):
+    class Meta:
+        model = Food_types
+        fields = '__all__'
+        
 class MenuSerializer(serializers.ModelSerializer):
     
     menu_picture = serializers.ImageField(
             max_length=None, use_url=True
         )
     
+    food_types = serializers.SerializerMethodField()
+    
+    def get_food_types(self, obj):
+        return obj.food_types.type_name
     class Meta:
         model = Menu
-        # fields = '__all__'
-        fields = ('name_ch', 'name_EN', 'name_Indonesian','menu_picture','Custom_unit', 'Custom_price')
+        fields = '__all__'
+        #fields = ('name_ch', 'name_EN', 'name_Indonesian','menu_picture','Custom_unit', 'Custom_price','food_types')
 
     
 

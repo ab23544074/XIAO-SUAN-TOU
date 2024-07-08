@@ -1,5 +1,5 @@
 from django.contrib import admin
-from .models import Menu, Factory,store
+from .models import *
 # Register your models here.
 
 
@@ -12,15 +12,18 @@ class YourModelAdmin(admin.ModelAdmin):
 admin.site.register(YourModel, YourModelAdmin)
 
 """    
+class FoodTypeAdmin(admin.ModelAdmin):
+    list_display = ['type_name']
+
 class FactoryAdmin(admin.ModelAdmin):
     list_display = ['factory_name']
 
 class MenuAdmin(admin.ModelAdmin):
-    list_display = ('name_ch','name_EN','name_Indonesian','Custom_unit','Custom_price','factory_name','Factory_unit','Factory_price')
+    list_display = ('name_ch','name_EN','name_Indonesian','food_types','Custom_unit','Custom_price','factory_name','Factory_unit','Factory_price')
     list_filter = ['factory_name']
     fieldsets = (
         ('商品名稱', {
-            'fields': ('name_ch', 'name_EN', 'name_Indonesian','menu_picture')
+            'fields': ('name_ch', 'name_EN', 'name_Indonesian','menu_picture','food_types')
         }),
         ('販售', {
             'fields': ('Custom_unit', 'Custom_price')
@@ -39,4 +42,5 @@ class StoreAdmin(admin.ModelAdmin):
 
 admin.site.register(Menu,MenuAdmin)
 admin.site.register(Factory,FactoryAdmin)
+admin.site.register(Food_types,FoodTypeAdmin)
 admin.site.register(store,StoreAdmin)
