@@ -1,0 +1,39 @@
+#begin_img{
+    width: 100%;
+    filter: brightness(0.25);
+    height: 30%;
+}
+
+.Recruits_begin {
+    span{
+    position: absolute;
+    z-index: 2;
+    font-weight: bold;
+    width: 100%;
+    
+    
+    
+
+    &:nth-child(1){
+        color: white;
+        display: flex;
+        align-items: center;
+        writing-mode: vertical-lr;
+        font-size: 3rem;
+        transform: translate(-50px, 100px);
+        letter-spacing: 7px;
+    }
+
+    &:nth-child(2){
+        text-align: center;
+        font-size: 2rem;
+        color:#935508;
+        transform: translate(50px, 250px);;
+    }
+    }
+
+    
+
+    
+}
+

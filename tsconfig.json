@@ -1,0 +1,19 @@
+{
+  "files": [],
+  
+  "references": [
+    {
+      "path": "./tsconfig.node.json"
+    },
+    {
+      "path": "./tsconfig.app.json"
+    }
+  ],
+  "compilerOptions": {
+    "allowJs": true,
+    "declaration": false,
+    "module": "es2022",
+    "moduleResolution": "Node"
+  }
+
+}
