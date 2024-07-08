@@ -2,18 +2,23 @@
   "name": "store_frontend",
   "version": "0.0.0",
   "private": true,
-  "type": "module",
+  "type": "commonjs",
+  
   "scripts": {
     "dev": "vite",
-    "build": "run-p type-check \"build-only {@}\" --",
-    "preview": "vite preview",
+    "preview": "vite preview --port 4173",
+    
+    "build": "npx vite build",
     "build-only": "vite build",
-    "type-check": "vue-tsc --build --force"
+    "type-check": "vue-tsc --build --force",
+    "start": "node server.js"
+    
   },
   "dependencies": {
     "animate.css": "^4.1.1",
     "bootstrap": "^5.3.3",
     "boxicons": "^2.1.4",
+    "express": "^4.19.2",
     "file-loader": "^6.2.0",
     "jquery": "^3.7.1",
     "scss": "^0.2.4",
