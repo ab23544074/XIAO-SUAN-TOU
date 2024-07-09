@@ -12,5 +12,5 @@ RUN pip install -r requirements.txt
 COPY . .
 
 EXPOSE 8000
-
-CMD ["python", "manage.py", "runserver"]
+CMD gunicorn myapp.wsgi
+#CMD ["python", "manage.py", "runserver"]
