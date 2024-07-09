@@ -96,12 +96,13 @@ WSGI_APPLICATION = 'myweb.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.mysql',
+        'ENGINE': 'django.db.backends.sqlite3',
+        #'ENGINE': 'django.db.backends.mysql',
         'NAME': 'HuangFamily_store', #database name
-        'USER': 'Selena',
-        'PASSWORD': 'ab23544074',
-        'HOST': '192.168.56.1',
-        'PORT': '3309',
+        #'USER': 'Selena',
+        #'PASSWORD': 'ab23544074',
+        #'HOST': '192.168.56.1',
+        #'PORT': '3309',
     }
 }
 
