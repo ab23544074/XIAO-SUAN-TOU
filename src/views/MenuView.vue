@@ -43,7 +43,7 @@
             }
         }
         try {
-            let data = await fetch('http://localhost:8000/api/Menu/',api_headers)
+            let data = await fetch('https://xiao-suan-tao-backend-cc9d64416e53.herokuapp.com/api/Menu/',api_headers)
             .then((res)=>{
 
                 
