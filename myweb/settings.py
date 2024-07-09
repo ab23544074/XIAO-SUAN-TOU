@@ -100,8 +100,8 @@ DATABASES = {
         'NAME': 'HuangFamily_store', #database name
         'USER': 'Selena',
         'PASSWORD': 'ab23544074',
-        'HOST': '192.168.176.1',
-        'PORT': '3306',
+        'HOST': '192.168.56.1',
+        'PORT': '3309',
     }
 }
 
