@@ -97,10 +97,10 @@ DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.mysql',
         'NAME': 'HuangFamily_store', #database name
-        'USER': 'root',
-        'PASSWORD': 'root',
+        'USER': 'Selena',
+        'PASSWORD': 'ab23544074',
         'HOST': '192.168.176.1',
-        'PORT': '3307',
+        'PORT': '3306',
     }
 }
 
