@@ -13,13 +13,17 @@ window.onresize = () => {
 let screen_width_change_event = () => { 
   let menu_icon_display = $('#menu_icon').is(':hidden');
   if (menu_icon_display === true) {
-    $('nav').show()
+    $('nav').show();
+    $('main').css({ position: 'relative',left:'250px' });
 
   }else{
-    $('nav').hide()
+    $('nav').hide();
+    $('main').css({ position: 'relative',left:'0px' });
   }
 
 }
+
+
 
 
 let SP_Nav_display = () => {
@@ -27,13 +31,17 @@ let SP_Nav_display = () => {
   let nav_show = $('nav').is(':hidden');
   
   if (menu_icon_display === true){
+    $('main').css({ position: 'relative',left:'0px'});
     return
   }
 
   if (nav_show === true ) {
-    $('nav').show()
+    $('nav').show();
+    $('main').css({ position: 'relative',left:'250px' })
+
   }else{
-    $('nav').hide()
+    $('nav').hide();
+    $('main').css({ position: 'relative',left:'0px'});
   }
   
 }
@@ -110,12 +118,12 @@ const Get_Store_Data = async () =>{
     
   </main>
   
-  <footer class="container-fluid row m-0 p-0">
+  <footer class="container-fluid row m-0">
     <!-- logo -->
     
       
 
-    <div class="footer-logo col-lg-3">
+    <div class="footer-logo col-lg-6">
       <img src="@/assets/img/changed_logo.png" alt=""  id="footer_logoIMG">
       <div class="footer_store_name">
 
@@ -125,7 +133,7 @@ const Get_Store_Data = async () =>{
       
     </div>
 
-    <div class="footer-content col-lg-9">
+    <div class="footer-content col-lg-6">
       <h2>分店資訊</h2>
       <ul v-for="item in store_detail" :key="item">
         <li>
