@@ -105,7 +105,7 @@ const Get_Store_Data = async () =>{
       <RouterLink to="/" @click="SP_Nav_display()">首頁 <span>HOME</span></RouterLink>
       <RouterLink to="/about" @click="SP_Nav_display()">關於我們 <span>ABOUT US</span></RouterLink>
       <RouterLink to="/Menu" @click="SP_Nav_display()">菜單 <span>MENU</span></RouterLink>
-      <RouterLink to="/address" @click="SP_Nav_display()">門市資訊 <span>BRANCH</span></RouterLink>
+      <RouterLink to="/Branch" @click="SP_Nav_display()">門市資訊 <span>BRANCH</span></RouterLink>
       <a href="https://www.chickpt.com.tw/company/k6z0r7ZlmpWD" @click="SP_Nav_display()" target="_blank">徵才資訊 <span>RECRUITS</span></a>
       
     </nav>

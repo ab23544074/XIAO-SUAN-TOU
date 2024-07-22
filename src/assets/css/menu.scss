@@ -142,9 +142,12 @@ header{
 
 
 .Select_menu_type_selection{
-    margin-top:10%;
+    padding-top:100px;
     text-align: center;
     font-size: 2rem;
+    span{
+        cursor: pointer;
+    }
 }
 
 
@@ -305,6 +308,26 @@ header{
     width: 300px;
 }
 
+
+
+.menu_foods_grounp{
+
+
+    select{
+        position: absolute;
+        width: 200px;
+        padding: .2rem 2rem .2rem .75rem;
+        left: calc(7%);
+
+        option{
+            color:black;
+        }
+    }
+
+    .form-select::before{
+        content: 'Languge';
+    }
+}
 
 @media (max-width:900px) {
 

@@ -58,23 +58,23 @@
     
 </style>
 <template>
-    
-    
+
+
     <div class="first_picture container-fluid">
-        
-        
+
+
         <div>
             <img src="@/assets/img/home_png2.png" alt="" class="home_first_picture">
         </div>
 
 
-        
-           
-        
+
+
+
         <div class="first_naming">
 
             <p class="font_1">
-            歡迎光臨
+                歡迎光臨
             </p>
 
             <p class="font_2">
@@ -87,10 +87,10 @@
                 鹹酥雞
             </p>
         </div>
-        
-        
-        
-        
+
+
+
+
     </div>
 
 
@@ -98,15 +98,15 @@
 
     <div class="home_about">
 
-        <h1> 創業故事 </h1>
+        <h1 class="home_title"> 創業故事 </h1>
 
 
         <div class="about_1">
             <div>
-                
+
                 <img src="@\assets\img\about_story1.jpg" alt="">
 
-                
+
             </div>
 
             <h3>夢想</h3>
@@ -118,10 +118,10 @@
         <div class="about_2">
 
             <div>
-                
+
                 <img src="@\assets\img\about_story2.jpg" alt="">
 
-                
+
             </div>
 
             <h3>勇闖</h3>
@@ -130,10 +130,10 @@
 
         <div class="about_3">
             <div>
-                
+
                 <img src="@\assets\img\about_1.png" alt="">
 
-                
+
             </div>
 
             <h3>茁壯</h3>
@@ -143,28 +143,26 @@
         <div class="more_store">
             <a href="./about"><button>─ 更多故事 ─</button></a>
         </div>
-        
+
 
     </div>
 
 
+    
+
+
+
+
+
+
     <div class="home_foods">
 
-        <p>熱門美食</p>
-        <swiper
-        :slides-per-view="perview"
-        allowTouchMove: false
-        space-between="0"
-        :speed="3000"
-        :modules="modules"
-        loop: true
-        
-        
-        :autoplay="{ delay: 0, disableOnInteraction: false }"
-        >
+        <p class="home_title">熱門美食</p>
+        <swiper :slides-per-view="perview" allowTouchMove: false space-between="0" :speed="3000" :modules="modules"
+            loop: true :autoplay="{ delay: 0, disableOnInteraction: false }">
             <swiper-slide><img src="@/assets/img/鹹酥雞.png" alt=""></swiper-slide>
-                                    
-            <swiper-slide><img src="@/assets/img/丸子類.png" alt=""></swiper-slide> 
+
+            <swiper-slide><img src="@/assets/img/丸子類.png" alt=""></swiper-slide>
             <swiper-slide><img src="@/assets/img/蔬菜.png" alt=""></swiper-slide>
             <swiper-slide><img src="@/assets/img/雞皮.png" alt=""></swiper-slide>
             <swiper-slide><img src="@/assets/img/魷魚絲.png" alt=""></swiper-slide>
@@ -173,16 +171,91 @@
             <swiper-slide><img src="@/assets/img/串串.png" alt=""></swiper-slide>
             <swiper-slide><img src="@/assets/img/地瓜.png" alt=""></swiper-slide>
             <swiper-slide><img src="@/assets/img/鹹酥雞.png" alt=""></swiper-slide>
-            <swiper-slide><img src="@/assets/img/丸子類.png" alt=""></swiper-slide> 
+            <swiper-slide><img src="@/assets/img/丸子類.png" alt=""></swiper-slide>
             <swiper-slide><img src="@/assets/img/蔬菜.png" alt=""></swiper-slide>
             <swiper-slide><img src="@/assets/img/雞皮.png" alt=""></swiper-slide>
             <swiper-slide><img src="@/assets/img/魷魚絲.png" alt=""></swiper-slide>
         </swiper>
+
+
+        <div class="story_change">
+
+
+        </div>
+
+
+        <div class="Selected-food row">
+            <div class="Selected-food-gorup">
+
+                <div class=" Selected_food_title">
+                    酥炸魷魚絲
+                </div>
+
+                <div class=" Selected_food_description">
+                    酥脆香甜、口感Q彈<br>
+                    搭配小蒜頭特製胡椒<br>
+                    是許顧客必買的項目<br>
+                </div>
+
+                <div class=" Selected_food_picture">
+                    <img src="@/assets/img/魷魚絲.png" alt="">
+                </div>
+
+            </div>
+
+
+            <div class="Selected-food-gorup">
+                <div class=" Selected_food_title">
+                    酥炸鹹酥雞
+                </div>
+
+                <div class=" Selected_food_description">
+                    傳統醃漬手法 <br>
+                    加上代骨雞肉<br>
+                    一口吃下滿滿的醬香和肉香<br>
+                    是許顧客必買商品<br>
+                </div>
+
+                <div class=" Selected_food_picture">
+                    <img src="@/assets/img/鹹酥雞.png" alt="">
+                </div>
+
+            </div>
+
+
+            <div class="Selected-food-gorup">
+                <div class=" Selected_food_title">
+                    七里香&雞胗&雞心
+                </div>
+
+                <div class=" Selected_food_description">
+                    特殊醃料配上酥脆油炸手法<br>
+                    去除腥味的同時<br>
+                    保留肉味的香氣<br>
+                    許多害怕內臟類的顧客也敢嘗試<br>
+                </div>
+
+                <div class=" Selected_food_picture">
+                    <img src="@/assets/img/串串.png" alt="">
+                </div>
+
+            </div>
+
+        </div><!--Selected-food-->
+
+        <div class="more_store">
+                    <a href="./Menu"><button>─ 更多菜單 ─</button></a>
+        </div>
     </div>
+
+
+
+
+
     <div class="container">
         <div class="introducions row">
             <div class="col-lg-12">
-                <h1>聯繫我們</h1>
+                <h1 class="home_title">聯繫我們</h1>
             </div>
             <div class="col-lg-5">
                 <h4> 小蒜頭鹹酥雞</h4>
@@ -193,7 +266,7 @@
                 <h4>營業時間</h4>
                 <ul>
                     <li>
-                        周一 17:00 ~ 23:00 
+                        周一 17:00 ~ 23:00
                     </li>
                     <li>周二 17:00 ~ 23:00</li>
                     <li>周三 公休</li>
@@ -202,14 +275,17 @@
                     <li>周六 17:00 ~ 23:30 </li>
                     <li>周日 17:00 ~ 23:00</li>
                 </ul>
-                
+
                 <div class="more_store">
                     <a href="./address"><button>─ 更多據點 ─</button></a>
                 </div>
             </div>
 
             <div class="col-lg-7">
-                <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d14694.339678250059!2d120.2942227!3d22.965509!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x346e71e603fd6cfb%3A0x6301298435e544f5!2z5bCP6JKc6aCt6bm96YWl6ZueKOatuOS7geW6lyk!5e0!3m2!1szh-TW!2stw!4v1721385290670!5m2!1szh-TW!2stw" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                <iframe
+                    src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d14694.339678250059!2d120.2942227!3d22.965509!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x346e71e603fd6cfb%3A0x6301298435e544f5!2z5bCP6JKc6aCt6bm96YWl6ZueKOatuOS7geW6lyk!5e0!3m2!1szh-TW!2stw!4v1721385290670!5m2!1szh-TW!2stw"
+                    width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"
+                    referrerpolicy="no-referrer-when-downgrade"></iframe>
             </div>
         </div>
 

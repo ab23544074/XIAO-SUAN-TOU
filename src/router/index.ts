@@ -29,6 +29,11 @@ const router = createRouter({
       name: 'Menu',
       
       component: () => import('../views/MenuView.vue')
+    },{
+      path: '/Branch',
+      name: 'Branch',
+      
+      component: () => import('../views/Branch.vue')
     }
    
   ]
