@@ -85,6 +85,29 @@
         }
 }
 
+.arrow{
+    height: 100px;
+    width: 3px;
+    margin-top: -1px;
+    position: absolute;
+    background-color: white;
+    animation: arrow 5s;
+    animation-fill-mode: forwards;
+    margin-top: 170px;
+    
+
+}
+
+
+
+@keyframes arrow{
+    from{
+        height: 100px;;
+    }
+    to{
+        height: 2350px;
+    }
+}
 
 
 @media (max-width:900px){
@@ -147,7 +170,14 @@
         margin-bottom: 90px;
     }
 
-
+    @keyframes arrow{
+        from{
+            height: 100px;;
+        }
+        to{
+            height: 2000px;
+        }
+    }
     
     
 
