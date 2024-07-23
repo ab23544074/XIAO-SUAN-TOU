@@ -61,7 +61,7 @@ MIDDLEWARE = [
 CORS_ORIGIN_ALLOW_ALL = False
 CORS_ORIGIN_WHITELIST = (
   'https://xiao-suan-tou.com',
-  'http://localhost',
+  'http://localhost:5173',
 )
 ROOT_URLCONF = 'myweb.urls'
 REST_FRAMEWORK = {
