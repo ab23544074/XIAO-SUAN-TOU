@@ -6,13 +6,21 @@
     
     import { ref } from "vue";
     import type {Ref} from "vue";
+    
  
     
 
     let show_picture:Ref<boolean> = ref(true) //default value
 
 
-    let change_show = (value:string) => {
+    let change_show = (value:string,event:any) => {
+
+
+        //change click event text decoration
+        $(".Select_menu_type_selection span").css("border-bottom","none")
+        $(event.target).css("border-bottom","solid")
+
+
         if (value == "picture"){
             show_picture.value = true
         }else{
@@ -31,7 +39,7 @@
 
 
     
-
+    
     let menu_data = ref();
     let Get_menu_data = async() =>{
 
@@ -44,6 +52,7 @@
         }
         try {
             let data = await fetch('https://xiao-suan-tao-backend-cc9d64416e53.herokuapp.com/api/Menu/',api_headers)
+            //let data = await fetch('http://127.0.0.1:8000/api/Menu/',api_headers)
             .then((res)=>{
 
                 
@@ -55,7 +64,7 @@
 
             console.log(data)
             menu_data.value = await data;
-
+          
 
 
 
@@ -73,12 +82,12 @@
     let Langauge_EN:Ref<boolean> = ref(false)
     let Langauge_IN:Ref<boolean> = ref(false)
 
-    let change_lang = (type:string,event:any) =>{
+    let change_lang = () =>{
 
         
         //change click event text decoration
-        $(".lang_selection span").css("text-decoration","none")
-        $(event.target).css("text-decoration","underline")
+        let type = $('.form-select').find(":selected").val();
+        
 
         if (type == "CH"){
 
@@ -86,9 +95,6 @@
             Langauge_CH.value = true
             Langauge_EN.value = false
             Langauge_IN.value = false
-
-
-            
 
             
         }else if(type == "EN"){
@@ -100,15 +106,20 @@
             Langauge_EN.value = false
             Langauge_IN.value = true
         }
+
+        console.log(Langauge_CH.value,Langauge_EN.value,Langauge_IN.value)
     }
+
+    
 
 
     let food_type = ref("全部")
     let fileter_food_types = (type:string) =>{
         food_type.value = type
-        console.log(food_type.value)
+        
     }
 
+    
 </script>
 <style lang="scss">
     @import "@/assets/css/menu.scss";
@@ -126,9 +137,9 @@
 
             <div class="Select_menu_type_selection">
 
-                <span @click="change_show('picture')">圖片菜單</span>
+                <span @click="change_show('picture',$event)" style="border-bottom: solid;">圖片菜單</span>
                 <span>｜</span>
-                <span @click="change_show('list')">紙本菜單</span>
+                <span @click="change_show('list',$event)">紙本菜單</span>
             </div>
 
            
@@ -141,10 +152,9 @@
         <div v-show="show_picture" class="menu_foods_grounp"><!-- display menu-->
             <p class="Our_menu"> Our Menu </p>
 
-            
-            <select class="form-select" aria-label="Default select example">
-                <option value="" selected disabled>-- Select Languge --</option>
-                <option  value="CH">繁體中文</option>
+            <span class="Languge_title">Languge: </span>
+            <select class="form-select" aria-label="Default select example" @change="change_lang()">
+                <option value="CH" selected>繁體中文</option>
                 <option value="EN">English</option>
                 <option value="IN">Indonesian</option>
                 </select>
@@ -163,29 +173,40 @@
 
             <div v-for="item in menu_data" :key="item" class="menu_food">
 
-                <div v-if="food_type == item.food_types || food_type == '全部'" class="food_type_group">
+                <div  v-if="food_type == item.food_types || food_type == '全部'" class="food_type_group">
 
                     <img :src="item.menu_picture" alt="" ><!--food pictures-->
+                    
 
+
+                    
                     <div class="menu_naming"> <!-- lang type-->
                         <div v-show="Langauge_CH">
                         {{ item.name_ch }}
+                        <p>{{ item.Custom_unit }}</p>
+                        <p>{{ item.Custom_price }}</p>
                         </div>
 
                         <div v-show="Langauge_EN">
 
                             {{ item.name_EN }}
+                            <p>{{ item.Custom_price }}</p>
                         </div>
                         
                         <div v-show="Langauge_IN">
 
                             {{ item.name_Indonesian }}
+                            <p>{{ item.Custom_price }}</p>
                         </div>
 
                     </div>
+
+
                     
-                    {{ item.Custom_unit }}
-                    {{ item.Custom_price }}
+
+                    
+                    
+                    
                 
                 </div>
 

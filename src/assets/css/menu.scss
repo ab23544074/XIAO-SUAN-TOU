@@ -139,7 +139,7 @@ body{
 
 
 .Select_menu_type_selection{
-    padding-top:100px;
+    padding-top:200px;
     text-align: center;
     font-size: 2rem;
     span{
@@ -169,13 +169,15 @@ body{
     font-size: 1.2rem;
     color: white;
     justify-content: center;
-    background-color: rgb(7 94 71);
+    background-color:  #ffc100;
     padding: 0.5rem;
     span{
         cursor: pointer;
         border-left: white solid 1px;
         padding: 0 1.5rem;
         transition-duration: 0.5s;
+        text-align: center;
+        font-weight: bold;
     }
 
     span:last-child{
@@ -192,7 +194,7 @@ body{
 .menu_food{
     
     
-    width: calc(100% / 3);
+    
     
     &>div{
         display: flex;
@@ -200,7 +202,8 @@ body{
         align-items: center;
         padding: 2rem 0;
         border-bottom: solid 1px;
-
+        width: 400px;
+        max-width: 90%;
         font-size: 1.2rem;
     }
     
@@ -229,7 +232,11 @@ body{
 .menu_naming{
     margin:0 10px;
     div{
-        font-size: 1.5rem;
+        font-size: 1.3rem;
+    }
+    p{
+        font-size: 1rem;
+        margin: 0;
     }
     
 }
@@ -241,7 +248,7 @@ body{
     flex-wrap: wrap;
     margin: 5%;
     padding: 2%;
-    justify-content: space-around;
+    justify-content: flex-start;
     background: rgb(255 255 255 / 55%);;
     border-radius: 30px;
 }
@@ -256,8 +263,8 @@ body{
     font-weight: bold;
     width: 100%;
     font-style: italic;
-    color: #075e47;
-        
+    
+    color: #fbbe00;
 }
 
 
@@ -309,13 +316,18 @@ body{
 
 .menu_foods_grounp{
 
-
+    .Languge_title{
+        font-size: 1.2rem;
+        margin-right: 10px;
+        color: black;
+        padding: 0.2rem 0.1rem 0.75rem 0.75rem;
+    }
     select{
-        position: absolute;
+        position: relative;
         width: 200px;
         padding: .2rem 2rem .2rem .75rem;
-        left: calc(7%);
-
+        
+        margin: 0 0 10px 0;
         option{
             color:black;
         }
@@ -397,7 +409,9 @@ body{
 
 
     
-    
+    .food_type span {
+        padding: 0 0.5rem;
+    }
 
 
 }

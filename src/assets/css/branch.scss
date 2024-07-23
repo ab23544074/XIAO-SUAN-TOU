@@ -109,6 +109,29 @@
     }
 }
 
+.home_title{
+    margin-top: 200px;
+    text-align: center;
+    font-size: 2rem;
+}
+
+.branch_block{
+    display: flex;
+    padding:3% 5%;
+    justify-content: center;
+    align-items: center;
+    border: rgb(104 143 189 / 32%)15px solid;
+    margin:5% 7%;
+    flex-wrap: wrap;
+
+
+
+    iframe{
+        width: 400px;
+        height: 300px;
+    }
+}
+
 
 @media (max-width:900px){
 
