@@ -96,7 +96,7 @@ const Get_Store_Data = async () =>{
     <a href="./" class="nav_icon">
       <img src="@/assets/img/Logo2.png" alt=""  id="logo">
     </a>
-    <img @click="SP_Nav_display()" src="@/assets/img/icons8-menu-150.svg" alt="" width="30" id="menu_icon">
+    <img @click="SP_Nav_display()" src="@/assets/img/icons8-menu-150.svg" alt="" width="25px" id="menu_icon">
 
     
     <nav> 
@@ -118,22 +118,29 @@ const Get_Store_Data = async () =>{
     
   </main>
   
-  <footer class="container-fluid row m-0">
+  <footer class="">
     <!-- logo -->
     
       
 
-    <div class="footer-logo col-lg-6">
+    <div class="footer-logo ">
       <img src="@/assets/img/changed_logo.png" alt=""  id="footer_logoIMG">
       <div class="footer_store_name">
 
         <span class="footer_store_name_1">小蒜頭</span>
         <span class="footer_store_name_2">鹹酥雞</span>
+        
+
+        <div class="en_name">
+          <span>XIAO SUAN TOU</span>
+          
+          <span>Taiwanese Fried Chicken</span>
+        </div>
       </div>
       
     </div>
 
-    <div class="footer-content col-lg-6">
+    <div class="footer-content ">
       <h2>分店資訊</h2>
       <ul v-for="item in store_detail" :key="item">
         <li>

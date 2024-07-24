@@ -2,10 +2,8 @@
 .second {
 
 
-    background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, .7)),url("@/assets/img/history_background.jpg");
-    background-size: 100%;
     
-    color:white;
+    
     padding: 0 !important;
     margin: 0 !important;
     h1{
@@ -90,7 +88,7 @@
     width: 3px;
     margin-top: -1px;
     position: absolute;
-    background-color: white;
+    
     animation: arrow 5s;
     animation-fill-mode: forwards;
     margin-top: 170px;

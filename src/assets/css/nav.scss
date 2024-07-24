@@ -164,12 +164,16 @@ footer{
     display: flex;
     color: #fff;
     padding: 1rem 3rem;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    
     
 }
 
 
 .footer-logo{
-    width: 30%;
+    
     align-content: center;
     text-align: center;
     
@@ -204,9 +208,19 @@ footer{
     
     font-family: "Cactus Classical Serif", serif;
     font-weight: bold;
+
+    
 }
 
-
+.en_name{
+    span{
+        font-size: 0.7rem;
+        color: #8b3d0a;
+    }
+    span:nth-child(1){
+        margin-right: 5px;
+    }
+}
 .footer_store_name_1{
     font-size: 2.5rem;
 
@@ -218,8 +232,48 @@ footer{
     color:#1db4ed;
 
 }
+
+@media (max-width:700px) {
+
+    footer{
+        justify-content: center;
+     
+ }
+
+
+        
+    .footer-content{
+        
+
+        h2{
+            text-align: center;
+            margin-top:50px;
+        }
+    }
+}
+
 @media (max-width:400px) {
+    
+
+    .en_name{
+        span{
+            font-size: 0.7rem;
+            color: #8b3d0a;
+        }
+        span:nth-child(1){
+            margin-right: 5px;
+        }
+    }
+
+
     #logo {
         width: 200px;
     }
+
+    header{
+        padding-left: 40px;
+    }
+
+    
+   
 }

@@ -88,14 +88,14 @@ let story:any = [{
        
 
 
-        <div class="col-lg-3 first_picture">
+        <div class="col-lg-4 first_picture">
 
         
             <img :src="item.picture" alt="" class="about_1">
 
         </div>
 
-        <div  class="col-lg-9">
+        <div  class="col-lg-8">
 
             
 

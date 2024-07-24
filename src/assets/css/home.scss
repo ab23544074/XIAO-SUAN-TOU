@@ -312,7 +312,7 @@
   background-image: url(/src/assets/img/Menu_picture1.jpg);
   background-repeat: no-repeat;
   background-position: 100px;
-  background-size: 90% 100%;
+  background-size: 100% 75%;
   background-attachment: fixed;
   
   width: 100%;
@@ -436,6 +436,47 @@
     font-size: 1rem;
     
   }
+}
+
+
+.home_about {
+  img{
+
+      height: 70vw;
+      width: 70vw;
+  }
+
+}
+
+
+
+.story_change {
+ 
+  background-position: 3rem;
+  background-size: 100% 75%;
+  border-bottom: white 2rem solid;
+  border-top: white 2rem solid;
+  border-left: white 2rem solid;
+  border-right: white 2rem solid;
+}
+
+.introducions{
+  .col-lg-5{
+    padding-left: 3rem;
+  }
+
+
+  .col-lg-7 {
+    text-align: center;
+      iframe{
+      width: 300px;
+      height: 300px;
+      
+    }
+  }
+
+
+
 }
 
 }
