@@ -75,7 +75,7 @@
 .history_pic{
 
     img {
-    
+            
             width: 400px ;
             display: block;
             left: 270px;
@@ -127,6 +127,7 @@
     iframe{
         width: 400px;
         height: 300px;
+        max-width: 70vw;
     }
 }
 

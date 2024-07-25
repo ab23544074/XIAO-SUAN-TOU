@@ -10,6 +10,7 @@
     import {ref} from 'vue';
     import { Autoplay} from "swiper/modules";
     import $ from 'jquery';
+    import 'animate.css';
     
     const modules = [Autoplay]
     
@@ -64,7 +65,7 @@
 
 
         <div>
-            <img src="@/assets/img/home_png2.png" alt="" class="home_first_picture">
+            <img src="@/assets/img/home_png2.png" alt="" class="wow animate__slideInDown home_first_picture" data-wow-duration="2s">
         </div>
 
 
@@ -73,16 +74,16 @@
 
         <div class="first_naming">
 
-            <p class="font_1">
+            <p class="wow animate__fadeInDown font_1" data-wow-duration="3s" data-wow-delay="1s">
                 歡迎光臨
             </p>
 
-            <p class="font_2">
+            <p class="wow animate__fadeInDown font_2" data-wow-duration="3s" data-wow-delay="2s">
 
                 小蒜頭
             </p>
 
-            <p class="font_3">
+            <p class="wow animate__fadeInDown font_3" data-wow-duration="3s" data-wow-delay="3s">
 
                 鹹酥雞
             </p>
@@ -98,13 +99,13 @@
 
     <div class="home_about">
 
-        <h1 class="home_title"> 創業故事 </h1>
+        <h1 class="wow animate__fadeIn home_title" data-wow-duration="2s"> 創業故事 </h1>
 
 
-        <div class="about_1">
+        <div class="wow animate__fadeIn about_1" data-wow-duration="2s" >
             <div>
 
-                <img src="@\assets\img\about_story1.jpg" alt="">
+                <img src="@\assets\img\about_story1.jpg" alt=""  >
 
 
             </div>
@@ -115,7 +116,7 @@
 
         </div>
 
-        <div class="about_2">
+        <div class="wow animate__fadeIn about_2" data-wow-duration="2s" >
 
             <div>
 
@@ -128,7 +129,7 @@
             <p>創業初期，努力打拼</p>
         </div>
 
-        <div class="about_3">
+        <div class="wow animate__fadeIn about_3" data-wow-duration="2s" >
             <div>
 
                 <img src="@\assets\img\about_1.png" alt="">

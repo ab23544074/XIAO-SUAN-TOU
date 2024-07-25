@@ -19,6 +19,11 @@ header {
 }
 
 
+main{
+    padding-top:80px;
+}
+
+
 .logo {
     display: block;
     margin: 0 auto 2rem;
@@ -118,7 +123,7 @@ nav {
     }
     header {
 
-        padding: 10px 25px;
+        padding: 10px 15px;
         
         flex-direction: row-reverse;
         justify-content: left;

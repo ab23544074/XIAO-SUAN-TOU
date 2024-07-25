@@ -83,7 +83,7 @@ let story:any = [{
     <h1 class="wow animate__animated animate__fadeIn story_title" >老闆的故事</h1>
  
     
-    <div class="first container-fluid row " v-for="item in story" :key="item">
+    <div class="first container-fluid" v-for="item in story" :key="item">
 
        
 

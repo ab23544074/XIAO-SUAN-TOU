@@ -8,7 +8,7 @@
 .home_title{
   
     
-  margin:100px 0 50px;
+  margin:20px 0 100px;
   font-weight: bold;
   font-size: 2rem;
   color: black;
@@ -55,16 +55,21 @@
 
 
     .font_1{
+      opacity: 0;
+      animation-fill-mode: forwards;
       font-size: 5rem;
       writing-mode: vertical-lr;
       margin-top:-30px
     }
     .font_2{
+      opacity: 0;
+      animation-fill-mode: forwards;
       font-size: 3.5rem;
       writing-mode: vertical-lr;
     }
 
     .font_2::after{
+      
       content: 'XIAO SUAN TOU';
       display: block;
       font-size: 1.2rem;
@@ -72,6 +77,8 @@
       letter-spacing: 2px;
     }
     .font_3{
+      opacity: 0;
+      animation-fill-mode: forwards;
       font-size: 2.5rem;
       color: #0099d1;
       text-align: left;
@@ -263,12 +270,14 @@
   text-align: center;
   margin-bottom: 70px;
   padding:0 50px;
-  
+  div{
+    margin-bottom: 30px;
+  }
   
   h1{
     width: 100%;
     font-weight: bold;
-    margin-bottom: 50px;
+    
   }
 
   h3{
@@ -312,7 +321,7 @@
   background-image: url(/src/assets/img/Menu_picture1.jpg);
   background-repeat: no-repeat;
   background-position: 100px;
-  background-size: 100% 75%;
+  background-size: 100% 100%;
   background-attachment: fixed;
   
   width: 100%;
@@ -385,12 +394,12 @@
   padding-top:7rem;
   display: flex;
   flex-direction: column-reverse;
-  justify-content: center;
+  justify-content: space-evenly;
   padding: 50px;
 
   img{
       
-      width: 50vw;
+      width: 80vw;
       
   }
 
@@ -439,6 +448,10 @@
 }
 
 
+.home_title{
+  margin-top:-20px;
+  }
+
 .home_about {
   img{
 
@@ -452,12 +465,7 @@
 
 .story_change {
  
-  background-position: 3rem;
-  background-size: 100% 75%;
-  border-bottom: white 2rem solid;
-  border-top: white 2rem solid;
-  border-left: white 2rem solid;
-  border-right: white 2rem solid;
+  display: none;
 }
 
 .introducions{

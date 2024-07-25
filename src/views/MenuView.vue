@@ -33,10 +33,49 @@
     
 
     $(document).ready(function () {
-        Get_menu_data()
+        Get_menu_data();
+        get_food_types();
     })
 
+    let food_type_datas:any = ref([]);
+    let get_food_types = async () => {
+        let api_headers = {
 
+            method: 'GET',
+            headers: {
+                'Content-Type': 'application/json'
+            }
+        }
+        try {
+                // data = await fetch('https://xiao-suan-tao-backend-cc9d64416e53.herokuapp.com/api/FoodType/', api_headers)
+                let data = await fetch('http://127.0.0.1:8000/api/FoodType/',api_headers)
+                .then((res) => {
+
+
+
+                    return res.json()
+                })
+
+
+
+            
+
+            for (let index = 0; index < data.length; index++) {
+                food_type_datas.value.push(data[index]['type_name']);
+                
+            }
+
+            console.log(food_type_datas.value)
+            
+
+
+
+
+        } catch (error) {
+
+            console.log(error)
+        }
+    }
 
     
     
@@ -160,14 +199,11 @@
                 </select>
             
             
-
+            
             <div class="food_type">
                 <span @click="fileter_food_types('全部')">全部</span>
-                <span @click="fileter_food_types('雞肉')">雞肉</span>
-                <span @click="fileter_food_types('豬肉')">豬肉</span>
-                <span @click="fileter_food_types('蔬菜')">蔬菜</span>
-                <span @click="fileter_food_types('海鮮')">海鮮</span>
-                <span @click="fileter_food_types('其他')">其他</span>
+                <span  v-for="item in food_type_datas" :key="item" @click="fileter_food_types(item)">{{item}}</span>
+                
 
             </div>
 
