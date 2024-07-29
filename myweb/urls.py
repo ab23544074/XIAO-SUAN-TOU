@@ -16,6 +16,7 @@ router = DefaultRouter()
 router.register(r'music', views.MusicViewSet)
 router.register(r'store', views.StoreViewSet)
 router.register(r'Menu', views.MenuViewSet)
+router.register(r'FoodType', views.foodtypeSet)
 
 
 urlpatterns = [

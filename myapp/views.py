@@ -26,6 +26,12 @@ class MenuViewSet(viewsets.ModelViewSet):
     queryset = Menu.objects.all()
     serializer_class = MenuSerializer
 
+
+# Create your views here.
+class foodtypeSet(viewsets.ModelViewSet):
+    queryset = Food_types.objects.all()
+    serializer_class = FoodtypeSerializer
+
 # Create your views here.   
 def home(request):
     return HttpResponse("Home page")

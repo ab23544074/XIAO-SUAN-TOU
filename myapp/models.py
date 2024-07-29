@@ -1,5 +1,5 @@
 from django.db import models
-
+from cloudinary.models import CloudinaryField
 # Create your models here.
 
 
@@ -21,6 +21,8 @@ class Menu(models.Model):
         blank=True
     )
     menu_picture = models.ImageField(upload_to='static/images/', blank=True, null=True)
+    #menu_picture = CloudinaryField('image',null=True)
+    
     factory_name = models.ForeignKey(
         'Factory',
         on_delete=models.SET_NULL,

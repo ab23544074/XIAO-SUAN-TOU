@@ -1,7 +1,7 @@
 from django.utils.timezone import now
 from rest_framework import serializers
 from myapp.models import *
-
+from cloudinary.forms import CloudinaryFileField
 
 class ToUpperCaseCharField(serializers.CharField):
     def to_representation(self, value):
@@ -31,14 +31,16 @@ class FoodtypeSerializer(serializers.ModelSerializer):
     class Meta:
         model = Food_types
         fields = '__all__'
+
+        
         
 class MenuSerializer(serializers.ModelSerializer):
     
     menu_picture = serializers.ImageField(
-            max_length=None, use_url=True
-        )
+    max_length=None, use_url=True)
+    #menu_picture = CloudinaryFileField()
     
-    food_types = serializers.SerializerMethodField()
+    #food_types = serializers.SerializerMethodField()
     
     def get_food_types(self, obj):
         return obj.food_types.type_name
