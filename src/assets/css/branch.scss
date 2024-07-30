@@ -83,31 +83,6 @@
         }
 }
 
-.arrow{
-    height: 100px;
-    width: 3px;
-    margin-top: -1px;
-    position: absolute;
-    
-    animation: arrow 5s;
-    animation-fill-mode: forwards;
-    margin-top: 170px;
-    background-color: black;
-    
-
-}
-
-
-
-@keyframes arrow{
-    from{
-        height: 100px;;
-    }
-    to{
-        height: 2350px;
-    }
-}
-
 .home_title{
     margin-top: 8%;
     text-align: center;
@@ -173,7 +148,7 @@
     .second .history {
         align-items: flex-start;
        
-        padding-left: 50px;
+        padding-left: 30px;
     }
 
 

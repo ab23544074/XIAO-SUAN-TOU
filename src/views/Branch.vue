@@ -146,7 +146,7 @@ let histroy: any = [{
             <h1 class="wow animate__animated animate__fadeIn">門市故事</h1>
 
 
-            <div class="arrow"></div>
+           
 
 
             <div class="history_text">
