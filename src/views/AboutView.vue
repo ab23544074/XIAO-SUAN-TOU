@@ -1,6 +1,6 @@
 <script setup lang="ts">
 import "@/assets/css/about.scss";
-import "@/assets/js/about"
+
 
 import 'bootstrap/dist/css/bootstrap.min.css';
 import {onMounted, ref} from 'vue';

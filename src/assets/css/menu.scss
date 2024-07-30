@@ -139,9 +139,9 @@ body{
 
 
 .Select_menu_type_selection{
-    padding-top:200px;
+    padding-top:5vw;
     text-align: center;
-    font-size: 2rem;
+    font-size: 1.6rem;
     span{
         cursor: pointer;
     }
@@ -212,7 +212,7 @@ body{
     }
     img{
         width:15vw;;
-        padding:20px;
+        padding:8px;
         max-width: 150px;
         min-width: 100px;
         object-fit: cover;
@@ -412,6 +412,10 @@ body{
     .food_type span {
         padding: 0 0.5rem;
     }
+
+
+
+   
 
 
 }

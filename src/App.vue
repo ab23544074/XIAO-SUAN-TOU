@@ -14,11 +14,13 @@ let screen_width_change_event = () => {
   let menu_icon_display = $('#menu_icon').is(':hidden');
   if (menu_icon_display === true) {
     $('nav').show();
-    $('main').css({ position: 'relative',left:'250px' });
+    $('main').css({ position: 'relative',left:'0px' });
+    
 
   }else{
     $('nav').hide();
-    $('main').css({ position: 'relative',left:'0px' });
+    
+   
   }
 
 }
