@@ -47,7 +47,7 @@
             }
         }
         try {
-                data = await fetch('https://xiao-suan-tao-backend-cc9d64416e53.herokuapp.com/api/FoodType/', api_headers)
+                let data = await fetch('https://xiao-suan-tao-backend-cc9d64416e53.herokuapp.com/api/FoodType/', api_headers)
                 //let data = await fetch('http://127.0.0.1:8000/api/FoodType/',api_headers)
                 .then((res) => {
 
