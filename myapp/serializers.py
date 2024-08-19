@@ -42,12 +42,11 @@ class MenuSerializer(serializers.ModelSerializer):
     
     #food_types = serializers.SerializerMethodField()
     
-    def get_food_types(self, obj):
-        return obj.food_types.type_name
+    food_types = serializers.CharField(source='food_types.type_name')
     class Meta:
         model = Menu
-        fields = '__all__'
-        #fields = ('name_ch', 'name_EN', 'name_Indonesian','menu_picture','Custom_unit', 'Custom_price','food_types')
+        #fields = '__all__'
+        fields = ('name_ch', 'name_EN', 'name_Indonesian','menu_picture','Custom_unit', 'Custom_price','food_types')
 
     
 
