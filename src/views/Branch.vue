@@ -84,7 +84,7 @@ let histroy: any = [{
             <div class="col-lg-4">
                 <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d14686.68578932631!2d120.3078521!3d23.0358327!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x346e713b4e78ccd1%3A0xa70f135a4d7db78d!2z5bCP6JKc6aCt6bm96YWl6Zue5paw5YyW!5e0!3m2!1szh-TW!2stw!4v1721713527273!5m2!1szh-TW!2stw" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
             </div>
-            <div class="col-lg-8 store">
+            <div class="col-lg-8 ">
                 <h4> 新化店 </h4>
 
 
