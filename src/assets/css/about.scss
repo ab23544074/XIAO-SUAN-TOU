@@ -13,12 +13,14 @@
     background: black;
     color: white;
     display: flex;
+    flex-wrap: wrap;
+    justify-content:center;
 
     div{
 
         
         align-items: center;
-        display: flex;
+        
         flex-direction: column;
     }
 
@@ -32,7 +34,7 @@
     }
 
     .about_description{
-
+        width: 65%;
         padding: 3% 5% 10%;
         font-size: 1.2rem;
         letter-spacing: 3px;
@@ -41,6 +43,7 @@
     .about_1{
         width: 300px;
         margin: 20px 0;
+        max-width: 90%;
         
     }
 }
@@ -66,6 +69,9 @@
 
     
     .first {
+
+
+            padding: 3% 5%;
             .about_description {
     
     

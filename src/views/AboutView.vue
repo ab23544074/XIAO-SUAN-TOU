@@ -83,30 +83,30 @@ let story:any = [{
     <h1 class="wow animate__animated animate__fadeIn story_title" >老闆的故事</h1>
  
     
-    <div class="first container-fluid" v-for="item in story" :key="item">
+    <div class="first " v-for="item in story" :key="item">
 
        
 
 
-        <div class="col-lg-4 first_picture">
+        <div class=" first_picture">
 
         
             <img :src="item.picture" alt="" class="about_1">
 
         </div>
 
-        <div  class="col-lg-8">
+        
 
             
 
 
-            <div class="about_description wow animate__animated animate__zoomIn">
-                {{ item.description }}
+        <div class="about_description wow animate__animated animate__zoomIn">
+            {{ item.description }}
 
-                
+            
 
-            </div>
         </div>
+        
     </div>
 
 
